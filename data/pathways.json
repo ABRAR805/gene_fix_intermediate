@@ -1,0 +1,86 @@
+{
+  "TP53": {
+    "full_name": "Tumor Protein P53",
+    "pathways": [
+      {
+        "name": "Cell Cycle Regulation",
+        "function": "Prevents uncontrolled cell division by pausing the cell cycle for DNA repair"
+      },
+      {
+        "name": "Apoptosis",
+        "function": "Induces programmed cell death in response to DNA damage"
+      },
+      {
+        "name": "DNA Repair",
+        "function": "Activates repair proteins when DNA is damaged"
+      },
+      {
+        "name": "Tumor Suppression",
+        "function": "Prevents the formation of tumors by regulating cell cycle and death"
+      }
+    ]
+  },
+  "KRAS": {
+    "full_name": "Kirsten Rat Sarcoma Viral Oncogene Homolog",
+    "pathways": [
+      {
+        "name": "RAS-MAPK Signaling",
+        "function": "Transmits growth signals from the cell membrane to the nucleus"
+      },
+      {
+        "name": "Cell Proliferation",
+        "function": "Stimulates cell growth and division"
+      },
+      {
+        "name": "Apoptosis Regulation",
+        "function": "Can block or activate apoptosis depending on context"
+      },
+      {
+        "name": "Cytoskeletal Organization",
+        "function": "Involved in reshaping cell structure during migration or division"
+      }
+    ]
+  },
+  "EGFR": {
+    "full_name": "Epidermal Growth Factor Receptor",
+    "pathways": [
+      {
+        "name": "EGFR Signaling Pathway",
+        "function": "Promotes cell proliferation, differentiation, and survival"
+      },
+      {
+        "name": "Cell Growth",
+        "function": "Supports cellular enlargement and division"
+      },
+      {
+        "name": "Proliferation",
+        "function": "Triggers pathways that lead to DNA replication and mitosis"
+      },
+      {
+        "name": "Apoptosis",
+        "function": "Has dual roles; can promote or inhibit apoptosis"
+      },
+      {
+        "name": "Cell Migration",
+        "function": "Facilitates epithelial to mesenchymal transitions and mobility"
+      }
+    ]
+  },
+  "BRCA1": {
+    "full_name": "Breast Cancer Type 1 Susceptibility Protein",
+    "pathways": [
+      {
+        "name": "DNA Repair",
+        "function": "Essential for homologous recombination repair of DNA double-strand breaks"
+      },
+      {
+        "name": "Cell Cycle Checkpoint",
+        "function": "Halts the cell cycle to allow for repair of damaged DNA"
+      },
+      {
+        "name": "Homologous Recombination",
+        "function": "Facilitates high-fidelity DNA repair using a sister chromatid"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeneFixer | Structure Viewer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .viewer-container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      height: 600px;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3366cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .back-btn:hover {
+      background-color: #254b9e;
+    }
+  </style>
+</head>
+<body>
+  <h2>3D Structure Viewer for Gene: {{ gene }}</h2>
+
+  <div class="viewer-container" id="viewer"></div>
+
+  <a href="/" class="back-btn">🔙 Back to Home</a>
+
+  <script src="https://unpkg.com/ngl@2.0.0-beta.1/dist/ngl.js"></script>
+  <script>
+    var stage = new NGL.Stage("viewer");
+
+    // Dynamically use gene's structure file or fallback to sample
+    const pdbID = "{{ pdb_id | default('1crn') }}"; // passed from Flask backend
+
+    stage.loadFile("https://files.rcsb.org/download/" + pdbID + ".pdb").then(function (o) {
+      o.addRepresentation("cartoon", { color: "residueindex" });
+      o.autoView();
+    });
+  </script>
+</body>
+</html>
+

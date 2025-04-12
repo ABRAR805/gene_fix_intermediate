@@ -1,0 +1,42 @@
+Gene_Name   Mutation_Type   Mutation_Code   Disease_Association   Mutation_Impact   Mutation_Frequency   Gene_Function   Family_History
+TP53        Missense        p.R175H         Li-Fraumeni Syndrome   Deleterious       High                 Tumor Suppressor Yes
+TP53        Missense        p.R248Q         Breast Cancer, Lung Cancer   Deleterious       Medium               Tumor Suppressor Yes
+TP53        Insertion       1100insC        Cancer (multiple types)   Deleterious       Low                  Tumor Suppressor No
+TP53        Deletion        168delA         Li-Fraumeni Syndrome, Various Cancers   Deleterious       Low                  Tumor Suppressor Yes
+KRAS        Missense        p.G12V          Colorectal Cancer, Lung Cancer   Deleterious       High                 Oncogene        No
+KRAS        Missense        p.G12C          Pancreatic Cancer        Deleterious       Medium               Oncogene        Yes
+KRAS        Missense        p.G13D          Colorectal Cancer, Pancreatic Cancer   Deleterious       High                 Oncogene        Unknown
+KRAS        Insertion       35insA          Pancreatic Cancer        Neutral            Low                  Oncogene        No
+BRCA1       Insertion       5382insC        Breast Cancer, Ovarian Cancer   Deleterious       High                 DNA Repair Gene  Yes
+BRCA1       Missense        p.R1699Q        Breast Cancer, Ovarian Cancer   Deleterious       Medium               DNA Repair Gene  No
+BRCA1       Deletion        185delAG        Hereditary Breast Cancer   Deleterious       High                 DNA Repair Gene  Yes
+BRCA1       Missense        p.C61G          Ovarian Cancer, Breast Cancer   Deleterious       High                 DNA Repair Gene  No
+BRCA2       Missense        p.R2336W        Ovarian Cancer, Breast Cancer   Deleterious       Medium               DNA Repair Gene  No
+BRCA2       Deletion        617delT         Breast Cancer, Ovarian Cancer   Deleterious       High                 DNA Repair Gene  Yes
+BRCA2       Insertion       5266insC        Hereditary Breast Cancer, Ovarian Cancer   Deleterious       Medium               DNA Repair Gene  No
+EGFR        Missense        p.L858R         Non-Small Cell Lung Cancer   Deleterious       High                 Oncogene        Unknown
+EGFR        Missense        p.T790M         Resistance to EGFR-TKIs in NSCLC   Deleterious       High                 Oncogene        Yes
+EGFR        Missense        p.E746_A750del  Lung Cancer, NSCLC        Deleterious       High                 Oncogene        Yes
+EGFR        Insertion       2369insA        Non-Small Cell Lung Cancer   Deleterious       Medium               Oncogene        No
+EGFR        Deletion        2335delC        Non-Small Cell Lung Cancer   Deleterious       High                 Oncogene        Unknown
+PIK3CA      Missense        p.H1047R        Endometrial Cancer, Colorectal Cancer   Deleterious       High                 Oncogene        No
+PIK3CA      Missense        p.E545K         Breast Cancer, Ovarian Cancer   Deleterious       Medium               Oncogene        Yes
+PIK3CA      Insertion       3147insG        Colorectal Cancer         Neutral            Low                  Oncogene        Unknown
+PIK3CA      Deletion        1500delC        Ovarian Cancer, Colorectal Cancer   Deleterious       Low                  Oncogene        No
+APC         Missense        p.W1616X        Colorectal Cancer, Familial Adenomatous Polyposis   Deleterious       High                 Tumor Suppressor Yes
+APC         Missense        p.R2216X        Familial Adenomatous Polyposis   Deleterious       Medium               Tumor Suppressor Yes
+APC         Deletion        3300delC        Colon Cancer, Familial Adenomatous Polyposis   Deleterious       Low                  Tumor Suppressor No
+MLH1        Missense        p.R265W         Hereditary Nonpolyposis Colorectal Cancer   Deleterious       Medium               DNA Repair Gene  No
+MLH1        Deletion        3375delG        Hereditary Nonpolyposis Colorectal Cancer   Deleterious       Low                  DNA Repair Gene  Unknown
+MLH1        Insertion       1958insA        Hereditary Nonpolyposis Colorectal Cancer   Deleterious       Medium               DNA Repair Gene  Yes
+CDKN2A      Missense        p.P16Leu146Pro  Familial Melanoma         Deleterious       Low                  Tumor Suppressor No
+CDKN2A      Deletion        2200delG        Melanoma, Pancreatic Cancer   Deleterious       High                 Tumor Suppressor Yes
+CDKN2A      Missense        p.V126D         Melanoma, Familial Melanoma   Deleterious       Low                  Tumor Suppressor Unknown
+MSH2        Missense        p.G670R         Hereditary Nonpolyposis Colorectal Cancer   Deleterious       High                 DNA Repair Gene  Yes
+MSH2        Deletion        2005delC        Hereditary Nonpolyposis Colorectal Cancer   Deleterious       High                 DNA Repair Gene  Yes
+MUTYH       Missense        p.G396D         Colorectal Cancer, MUTYH-Associated Polyposis   Deleterious       Medium               DNA Repair Gene  Unknown
+MUTYH       Deletion        703delG         Colorectal Cancer         Deleterious       Low                  DNA Repair Gene  No
+MUTYH       Insertion       3568insA        Colorectal Cancer         Neutral            Low                  DNA Repair Gene  Yes
+PTEN        Missense        p.G129E         Cowden Syndrome, Endometrial Cancer   Deleterious       High                 Tumor Suppressor No
+PTEN        Deletion        2147delG        Cowden Syndrome, Prostate Cancer   Deleterious       Medium               Tumor Suppressor Unknown
+PTEN        Missense        p.R130Q         Cowden Syndrome, Breast Cancer   Deleterious       Low                  Tumor Suppressor Yes

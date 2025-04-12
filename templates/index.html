@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeneFixer - Mutation Input</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .form-container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .form-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-buttons button {
+      flex: 1;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-buttons button[type="submit"][value="analyze"] {
+      background-color: #007BFF;
+      color: white;
+    }
+    .form-buttons button[type="submit"][value="simulate"] {
+      background-color: #28a745;
+      color: white;
+    }
+    .form-buttons button[type="submit"][value="live_simulation"] {
+      background-color: #17a2b8;
+      color: white;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>🧬 GeneFixer - Enter Mutation Details</h2>
+
+    {% if error %}
+      <p style="color: red;">Error: {{ error }}</p>
+    {% endif %}
+
+    <form action="/" method="POST">
+      <!-- Gene Name -->
+      <label for="gene">Gene Name:</label>
+      <select name="gene" id="gene" required>
+        <option value="TP53">TP53</option>
+        <option value="KRAS">KRAS</option>
+        <option value="EGFR">EGFR</option>
+        <option value="BRCA1">BRCA1</option>
+        <option value="BRCA2">BRCA2</option>
+        <option value="APC">APC</option>
+        <option value="MLH1">MLH1</option>
+        <option value="CDKN2A">CDKN2A</option>
+        <option value="PTEN">PTEN</option>
+        <option value="MUTYH">MUTYH</option>
+      </select>
+
+      <!-- Mutation -->
+      <label for="mutation">Mutation (HGVS format):</label>
+      <select id="mutation" name="mutation" required>
+        <option value="p.R175H">p.R175H</option>
+        <option value="p.G12V">p.G12V</option>
+        <option value="p.G12C">p.G12C</option>
+        <option value="p.G13D">p.G13D</option>
+        <option value="p.L858R">p.L858R</option>
+        <option value="p.T790M">p.T790M</option>
+        <option value="p.R2336W">p.R2336W</option>
+        <option value="p.E746_A750del">p.E746_A750del</option>
+        <option value="p.H1047R">p.H1047R</option>
+        <option value="p.E545K">p.E545K</option>
+        <option value="p.W1616X">p.W1616X</option>
+        <option value="p.R2216X">p.R2216X</option>
+        <option value="p.R130Q">p.R130Q</option>
+        <option value="p.P16Leu146Pro">p.P16Leu146Pro</option>
+        <option value="p.G129E">p.G129E</option>
+        <option value="p.R265W">p.R265W</option>
+      </select>
+
+      <!-- Other dropdowns (as in your original) -->
+      <label for="mutation_type">Mutation Type:</label>
+      <select name="mutation_type" id="mutation_type" required>
+        <option value="Missense">Missense</option>
+        <option value="Nonsense">Nonsense</option>
+        <option value="Insertion">Insertion</option>
+        <option value="Deletion">Deletion</option>
+      </select>
+
+      <label for="disease_association">Disease Association:</label>
+      <select name="disease_association" id="disease_association" required>
+        <option value="Li-Fraumeni Syndrome">Li-Fraumeni Syndrome</option>
+        <option value="Breast Cancer, Lung Cancer">Breast Cancer, Lung Cancer</option>
+        <option value="Pancreatic Cancer">Pancreatic Cancer</option>
+        <option value="Ovarian Cancer, Breast Cancer">Ovarian Cancer, Breast Cancer</option>
+        <option value="Hereditary Breast Cancer">Hereditary Breast Cancer</option>
+        <option value="Non-Small Cell Lung Cancer">Non-Small Cell Lung Cancer</option>
+        <option value="Colorectal Cancer">Colorectal Cancer</option>
+        <option value="Familial Adenomatous Polyposis">Familial Adenomatous Polyposis</option>
+        <option value="Hereditary Nonpolyposis Colorectal Cancer">Hereditary Nonpolyposis Colorectal Cancer</option>
+        <option value="Melanoma, Pancreatic Cancer">Melanoma, Pancreatic Cancer</option>
+        <option value="Cowden Syndrome">Cowden Syndrome</option>
+        <option value="MUTYH-Associated Polyposis">MUTYH-Associated Polyposis</option>
+      </select>
+
+      <label for="mutation_impact">Mutation Impact:</label>
+      <select name="mutation_impact" id="mutation_impact" required>
+        <option value="Deleterious">Deleterious</option>
+        <option value="Neutral">Neutral</option>
+      </select>
+
+      <label for="mutation_frequency">Mutation Frequency:</label>
+      <select name="mutation_frequency" id="mutation_frequency" required>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+
+      <label for="gene_function">Gene Function:</label>
+      <select name="gene_function" id="gene_function" required>
+        <option value="Tumor Suppressor">Tumor Suppressor</option>
+        <option value="Oncogene">Oncogene</option>
+        <option value="DNA Repair Gene">DNA Repair Gene</option>
+      </select>
+
+      <label for="family_history">Family History:</label>
+      <select name="family_history" id="family_history" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+
+      <label for="enzyme">CRISPR Enzyme:</label>
+      <select name="enzyme" id="enzyme" required>
+        <option value="Cas9">Cas9</option>
+        <option value="Cpf1">Cpf1</option>
+        <option value="C2c2">C2c2</option>
+      </select>
+
+      <label for="pam">PAM Sequence:</label>
+      <select name="pam" id="pam" required>
+        <option value="NGG">NGG</option>
+        <option value="NGA">NGA</option>
+        <option value="NGCG">NGCG</option>
+        <option value="NGAG">NGAG</option>
+      </select>
+
+      <label for="grna">gRNA Sequence:</label>
+      <select name="grna" id="grna" required>
+        <option value="GAGGAGGGGGAGGAG">GAGGAGGGGGAGGAG</option>
+        <option value="GAGGAGGGAGAGGAGG">GAGGAGGGAGAGGAGG</option>
+        <option value="TGGAGAGGGAGGAGG">TGGAGAGGGAGGAGG</option>
+        <option value="GAGGGAGGAGGGAG">GAGGGAGGAGGGAG</option>
+        <option value="CTCGAGGAAGGAAGG">CTCGAGGAAGGAAGG</option>
+        <option value="AGGAGGAGGGAGGAG">AGGAGGAGGGAGGAG</option>
+      </select>
+
+      <div class="form-buttons">
+        <button type="submit" name="action" value="analyze">🧪 Analyze Mutation</button>
+        <button type="submit" name="action" value="simulate">🔬 Simulate Mutation</button>
+        <button type="submit" name="action" value="live_simulation">⚡ Live Simulation</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

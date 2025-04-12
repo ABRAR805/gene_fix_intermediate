@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>GeneFixer - Simulation Results</title>
+</head>
+<body>
+    <h1>Simulation Results</h1>
+    <p><strong>Gene:</strong> {{ gene }}</p>
+    <p><strong>Mutation:</strong> {{ mutation }}</p>
+    <p><strong>Mutation Type:</strong> {{ mut_type }}</p>
+    <p><strong>Repair Plan:</strong> {{ repair['repair_type'] }}</p>
+
+    <h2>Simulation Details:</h2>
+    <p><strong>Status:</strong> {{ simulation.simulation_status }}</p>
+    <p><strong>Editing Efficiency:</strong> {{ simulation.editing_efficiency }}</p>
+    <p><strong>On-Target Effects:</strong> {{ simulation.on_target_effects }}</p>
+    <p><strong>Off-Target Effects:</strong> {{ simulation.off_target_effects }}</p>
+
+    <h2>Related Clinical Trials:</h2>
+    {% for trial in trials %}
+        <p><strong>Trial ID:</strong> {{ trial.id }} | <strong>Phase:</strong> {{ trial.phase }} | <strong>Status:</strong> {{ trial.status }}</p>
+    {% endfor %}
+</body>
+</html>

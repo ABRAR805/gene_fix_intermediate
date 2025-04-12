@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Gene Editing Simulation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='js/animation.js') }}" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>🔬 Live CRISPR Simulation</h2>
+    <p>This animation reflects the editing of your selected gene mutation.</p>
+    <button onclick="startSimulation()">▶️ Start Simulation</button>
+    <div id="simulation-steps"></div>
+  </div>
+</body>
+</html>

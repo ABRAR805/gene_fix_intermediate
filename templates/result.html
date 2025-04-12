@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeneFixer Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="report">
+    <h2>🧬 Mutation Report</h2>
+    <p><strong>Gene:</strong> {{ gene }}</p>
+    <p><strong>Mutation:</strong> {{ mutation }}</p>
+    <p><strong>Mutation Type:</strong> {{ mut_type }}</p>
+    <p><strong>CRISPR Enzyme:</strong> {{ enzyme }}</p>
+    <p><strong>PAM Sequence:</strong> {{ pam }}</p>
+    <p><strong>gRNA Sequence:</strong> {{ grna }}</p>
+
+    <!-- CRISPR Repair Plan Section -->
+    <h3>🛠️ CRISPR Repair Plan</h3>
+    {% if repair %}
+      <pre>{{ repair }}</pre>
+    {% else %}
+      <p>No CRISPR repair plan available for this mutation.</p>
+    {% endif %}
+
+    <!-- Optional: Validation & Safety -->
+    {% if safety %}
+      <h4>✅ Validation & Safety Recommendations</h4>
+      <pre>{{ safety }}</pre>
+    {% endif %}
+
+    <!-- Clinical Trials Section -->
+    <h3>🧪 Relevant Clinical Trials</h3>
+    {% if trials %}
+      <ul>
+        {% for trial in trials %}
+          <li>{{ trial }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No clinical trials available for this gene.</p>
+    {% endif %}
+
+    <!-- Button to go back to home page -->
+    <a href="/" class="back-btn">🔙 Try Another</a>
+  </div>
+</body>
+</html>
